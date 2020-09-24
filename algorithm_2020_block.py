@@ -2,9 +2,7 @@ __author__ = 'apple'
 import numpy as np
 import cv2
 import copy
-import datetime
 from imageio import imwrite
-from pathlib import Path
 import os
 
 # ----------------------------------------------------------------------------
@@ -14,11 +12,11 @@ import os
 #----------------------------------------------------------------------------
 
 # 640 320 160 128 80 40 20 10 5 4 2 1
-dirNum = 50
+dirNum = 90
 # fileNumber 文件的序号
-for fileNumber in range(31, dirNum+1):
-    projectPath = "/Users/apple/PycharmProjects/paper2020_fingerprint/"
-    path = projectPath + "FAPImages/finger_data/" + str(fileNumber)  # 测试集的文件根目录
+for fileNumber in range(11, dirNum+1):
+    projectPath = "/Users/yifanwu/Papers_Frank/2020-IEEE-Access--Rolled-Fingerprint-Construction/"
+    path = projectPath + "Experiments/datasets/finger_data/" + str(fileNumber)  # 测试集的文件根目录
     names = os.listdir(path)
     k_upper = -10000
     k_down = 10000
@@ -173,8 +171,7 @@ for fileNumber in range(31, dirNum+1):
 
     # 输出滚动指纹目前为止，拼接块的选择结果
 
-
-    imwrite(projectPath + 'FAPImages/algorithm_1/' + str(fileNumber) + '_0' + '.bmp', img0)
+    imwrite(projectPath + 'Experiments/results/algorithm_1/' + str(fileNumber) + '_0' + '.bmp', img0)
 
     #----------------------------------------------------------------------------
     # 模块二：拼接指纹图像的错位检测
@@ -351,5 +348,5 @@ for fileNumber in range(31, dirNum+1):
                 else:
                     disBad[i][j] = 1
 
-    imwrite(projectPath + 'FAPImages/algorithm_2/' + str(fileNumber) + '_0' + '.bmp', tempImg)
+    imwrite(projectPath + 'Experiments/results/algorithm_2/' + str(fileNumber) + '_0' + '.bmp', tempImg)
     print(str(fileNumber) + "finish！")

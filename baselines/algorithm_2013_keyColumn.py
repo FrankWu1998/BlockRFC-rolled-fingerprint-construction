@@ -7,20 +7,18 @@ from imageio import imwrite
 from pathlib import Path
 
 # ----------------------------------------------------------------------------
-# 模块一：基于关键列的拼接
-# 输入：多个图像序列集合
-# 输出：拼接完成的一张指纹图像
+# 模块一：基于关键列的实时指纹拼接
 #----------------------------------------------------------------------------
 
 # 640 320 160 128 80 40 20 10 5 4 2 1
-dirNum = 50
+dirNum = 90
 # fileNumber 文件的序号
-for fileNumber in range(31, dirNum + 1):
+for fileNumber in range(11, dirNum + 1):
     K = 300
     layer_Row = 1  # 越大越矮
     layer_Column = 800  # 越大越细
-    projectPath = "/Users/apple/PycharmProjects/paper2020_fingerprint/"
-    path = projectPath + "FAPImages/finger_data/" + str(fileNumber)  # 测试集的文件根目录
+    projectPath = "/Users/yifanwu/Papers_Frank/2020-IEEE-Access--Rolled-Fingerprint-Construction/"
+    path = projectPath + "Experiments/datasets/finger_data/" + str(fileNumber)  # 测试集的文件根目录
     maxImgNum = 300  # 最大文件数量
     st = maxImgNum  # 文件开始的编号
     ed = 0  # 文件终止的编号
@@ -155,5 +153,5 @@ for fileNumber in range(31, dirNum + 1):
 
     # 输出滚动指纹目前为止，拼接块的选择结果
 
-    imwrite(projectPath + 'FAPImages/algorithm_3/' + str(fileNumber) + '_0' + '.bmp', img0)
+    imwrite(projectPath + 'Experiments/results/algorithm_3/' + str(fileNumber) + '_0' + '.bmp', img0)
     print(str(fileNumber) + "finish！")

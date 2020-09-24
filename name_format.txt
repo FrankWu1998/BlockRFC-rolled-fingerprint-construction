@@ -1,0 +1,14 @@
+# effective_data 数据命名格式
+effective_data\1\
+
+1_0.bmp
+1_1.bmp
+1_2.bmp
+
+ExpRecord
+algorithm_1     # 2019  块拼接（未优化）
+1_0.bmp         # 1 为注册图像的文件夹，后面都是_0
+2_0.bmp
+
+algorithm_2     # 2020  块拼接（优化）
+1_0.bmp
