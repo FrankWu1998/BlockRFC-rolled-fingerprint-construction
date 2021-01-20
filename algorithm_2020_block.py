@@ -15,7 +15,7 @@ import os
 dirNum = 90
 # fileNumber 文件的序号
 for fileNumber in range(11, dirNum+1):
-    projectPath = "/Users/yifanwu/Papers_Frank/2020-IEEE-Access--Rolled-Fingerprint-Construction/"
+    projectPath = ""
     path = projectPath + "Experiments/datasets/finger_data/" + str(fileNumber)  # 测试集的文件根目录
     names = os.listdir(path)
     k_upper = -10000
