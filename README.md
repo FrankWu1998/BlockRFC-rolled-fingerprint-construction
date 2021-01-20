@@ -1,2 +1,2 @@
 # rolled-fingerprint-construction
-Frank's codes for rolled fingerprint construction
+BlockRFC's codes for rolled fingerprint construction
